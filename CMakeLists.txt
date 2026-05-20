@@ -25,6 +25,8 @@ set(
 
 add_executable(TurnBasedRPG
         main.cpp
+        Engine/ECS/Entity.h
+        Editor/Window.h
 )
 
 target_compile_definitions(
