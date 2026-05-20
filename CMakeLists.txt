@@ -27,6 +27,7 @@ add_executable(TurnBasedRPG
         main.cpp
         Engine/ECS/Entity.h
         Editor/Window.h
+        Editor/Image.h
 )
 
 target_compile_definitions(

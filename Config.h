@@ -6,11 +6,11 @@
 #include <SDL3/SDL.h>
 
 /**
-* Central place for important constants and helper functions.
-* Custom SDL event types, stored in the UserEvents namespace.
-* General configuration options, stored in the Config namespace. This includes settings like window dimensions and color schemes.
-* Configuration options for the level editor are stored in the Config::Editor namespace.
-*/
+ * @brief Central place for important constants and helper functions.
+ * Custom SDL event types, stored in the UserEvents namespace.
+ * General configuration options, stored in the Config namespace. This includes settings like window dimensions and color schemes.
+ * Configuration options for the level editor are stored in the Config::Editor namespace.
+ */
 namespace UserEvents{
 #ifdef WITH_EDITOR
     inline Uint32 ACTOR_DRAG{SDL_RegisterEvents(1)};
