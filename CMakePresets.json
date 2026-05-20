@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "windows",
+      "binaryDir": "build",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "linux",
+      "binaryDir": "build",
+      "generator": "Ninja",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+    {
+      "name": "default",
+      "binaryDir": "build",
+      "inherits": ["windows", "linux"]
+    }
+  ],
+  "buildPresets": [{
+    "name": "default",
+    "configurePreset": "default"
+  }]
+}
