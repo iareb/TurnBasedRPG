@@ -28,7 +28,7 @@ add_executable(TurnBasedRPG
         Engine/ECS/Entity.h
         Editor/Window.h
         Editor/Image.h
-)
+ "Editor/Text.h")
 
 target_compile_definitions(
         TurnBasedRPG PUBLIC
