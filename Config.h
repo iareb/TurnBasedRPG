@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <ostream>
 #include <string>
 #include <vector>
 #include <SDL3/SDL.h>
@@ -23,25 +22,26 @@ namespace UserEvents{
 }
 
 namespace Config {
-    inline const std::vector BUTTON_COLORS{
+    inline const std::vector BUTTON_COLORS = {
         SDL_Color{15, 15, 15, 255},  // Normal
         SDL_Color{15, 155, 15, 255}, // Hover
         SDL_Color{225, 15, 15, 255}, // Active
         SDL_Color{60, 60, 60, 255}   // Disabled
     };
 
-    inline constexpr SDL_Color FONT_COLOR{
-        255, 255, 255, 255
-      };
-
-    inline const std::string BASE_PATH{
+    inline const std::string BASE_PATH = {
         SDL_GetBasePath()
-      };
+    };
 
-    inline const std::string FONT{
+    inline const std::string FONT = {
         BASE_PATH + "Assets/Rubik-SemiBold.ttf"
-      };
+    };
 
+    inline constexpr SDL_Color FONT_COLOR = {
+        255, 255, 255, 255
+     };
+
+    inline constexpr int FONT_SIZE = 20;
 }
 
 #ifdef WITH_EDITOR
@@ -64,7 +64,7 @@ namespace Config::Editor {
     inline constexpr SDL_Color ACTOR_MENU_BACKGROUND = {15, 15, 15, 255};
 
     // Configs for the Editor's window
-    inline constexpr std::string WINDOW_TITLE = "Editor";
+    inline const std::string WINDOW_TITLE = "Editor";
     inline constexpr int WINDOW_WIDTH = LEVEL_WIDTH + ACTOR_MENU_WIDTH;
     inline constexpr int WINDOW_HEIGHT = LEVEL_HEIGHT + 50;
     inline constexpr SDL_Color WINDOW_BACKGROUND = {35, 35, 35, 255};
@@ -73,7 +73,7 @@ namespace Config::Editor {
 #endif
 
 namespace Config::Engine {
-    inline constexpr std::string WINDOW_TITLE = "RPG";
+    inline const std::string WINDOW_TITLE = "RPG";
     inline constexpr int WINDOW_WIDTH = 720;
     inline constexpr int WINDOW_HEIGHT = 400;
     inline constexpr SDL_Color WINDOW_BACKGROUND = {35, 35, 35, 255};
